@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-ajv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vuepress custom blog theme",
   "main": "Layout.vue",
   "scripts": {
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/andreasvirkus/vuepress-theme-ajv/issues"
   },
-  "homepage": "https://github.com/andreasvirkus/vuepress-theme-ajv#readme"
+  "homepage": "https://github.com/andreasvirkus/vuepress-theme-ajv#readme",
+  "peerDependencies": {
+    "vuepress": "^0.4.1"
+  }
 }

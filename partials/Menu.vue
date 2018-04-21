@@ -3,7 +3,8 @@
     <button class="menu__handle" title="Open menu"><span>Menu</span></button>
     <div class="menu__inner">
         <ul class="menu__list">
-          <li v-for="page in pages"
+          <li v-for="(page, i) in pages"
+							:key="i"
               class="menu__item"
               aria-current="page">
             <a :href="post.path" class="menu__link">{{ post.title }}</a>

@@ -1,7 +1,7 @@
 <template>
   <nav class="blog__menu" role="navigation">
     <ul class="blog__menu-list">
-      <li v-for="post in posts" class="blog__menu-item" :class="{ active: post.path === $router.path }">
+      <li v-for="(post, i) in posts" :key="i" class="blog__menu-item" :class="{ active: post.path === $router.path }">
         <a :href="'/' + post.path" class="blog__menu-link">
           <div class="blog__menu-title">{{ post.title }}</div>
           <div class="blog__menu-date"><em>{{ post.postDate }}</em></div>

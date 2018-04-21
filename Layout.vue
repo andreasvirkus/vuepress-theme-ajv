@@ -17,14 +17,13 @@
 <script>
 import Vue from 'vue'
 import nprogress from 'nprogress'
-import Home from './Home'
 import Blog from './Blog'
 import Navbar from './Navbar'
 import Page from './Page'
 import { pathToComponentName, getTitle, getLang } from '@app/util'
 
 export default {
-  components: { Home, Blog, Page, Navbar },
+  components: { Blog, Page, Navbar },
   created () {
     if (this.$ssrContext) {
       this.$ssrContext.title = getTitle(this.$title, this.$page)

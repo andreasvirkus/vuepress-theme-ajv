@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import BlogNav from './BlogNav'
+import BlogNav from './partials/BlogNav'
 // TODO: Get posts (all .md files from /thoughts dir)
 export default {
   data() {
