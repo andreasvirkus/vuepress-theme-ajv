@@ -35,8 +35,8 @@ export default {
     // update title / meta tags
     this.currentMetaTags = []
     const updateMeta = () => {
-      console.log('Document:', document);
-      console.log('Title:', document.title);
+      console.log('Page:', this.$page);
+      console.log('Title:', this.$title);
 
       document.title = getTitle(this.$title, this.$page)
       document.documentElement.lang = this.$lang

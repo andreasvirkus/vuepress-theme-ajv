@@ -23,7 +23,4 @@
     "url": "https://github.com/andreasvirkus/vuepress-theme-ajv/issues"
   },
   "homepage": "https://github.com/andreasvirkus/vuepress-theme-ajv#readme",
-  "peerDependencies": {
-    "vuepress": "^0.4.1"
-  }
 }

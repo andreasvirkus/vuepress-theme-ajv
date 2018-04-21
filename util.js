@@ -180,10 +180,7 @@ export function findPageForPath(pages, path) {
 }
 
 export function getTitle(siteTitle, page) {
-  const selfTitle = page.frontmatter.home ? null : (
-    page.frontmatter.title || // explicit title
-    page.title // inferred title
-  )
+  const selfTitle = page.frontmatter.title || page.title)
   return siteTitle
     ? selfTitle
       ? (siteTitle + ' | ' + selfTitle)

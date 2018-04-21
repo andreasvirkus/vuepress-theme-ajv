@@ -47,8 +47,6 @@ export default {
     top 0.7rem
 
 @media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .can-hide
-      display none
+  .navbar .can-hide
+    display none
 </style>
