@@ -24,6 +24,3 @@ export default {
 
 <style src="./css/blog.css"></style>
 <style src="./css/blog-nav.css"></style>
-<style>
-
-</style>

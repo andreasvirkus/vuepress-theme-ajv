@@ -17,6 +17,7 @@
       @mouseleave="unfocus">
       <li class="suggestion" v-for="(s, i) in suggestions"
         :class="{ focused: i === focusIndex }"
+        :key="i"
         @mousedown="go(i)"
         @mouseenter="focus(i)">
         <a :href="s.path" @click.prevent>
