@@ -1,0 +1,153 @@
+main ul {
+    padding-left: 1em;
+}
+
+li {
+    margin-right: 1em;
+    list-style: none;
+}
+
+
+/* Typography */
+
+h1 {
+    font-weight: 700;
+    line-height: 1.0;
+    font-size: 4em;
+    margin: 0;
+    font-family: var(--font-secondary);
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.8em;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+h2::after,
+h3::after,
+h4::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: #223;
+    background-color: var(--blog-post-divider);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /* letter-spacing: -0.05555556em; */
+    color: var(--heading-color);
+}
+
+h1+h3 {
+    margin-top: 0.3em;
+}
+
+
+@media screen and (max-width: 45em) {
+    h1 {
+        font-size: 2.6rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    h3, h4 {
+        font-size: 1.3rem;
+    }
+}
+
+main p {
+    font-size: 1.4em
+}
+
+main li {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+main li::before {
+    content: '∘ ';
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-13px);
+}
+
+p,
+ul,
+hr,
+form,
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+main li ul {
+    margin-bottom: 0;
+}
+
+main li li::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 11px;
+    height: 6px;
+    width: 6px;
+    background-color: var(--content-color);
+    border-radius: 50%;
+}
+
+blockquote {
+    position: relative;
+    margin: 3rem 1rem;
+    font-style: italic;
+    color: #555;
+}
+
+blockquote::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -2rem;
+    left: -2.5rem;
+    width: 115%;
+    height: 100%;
+    min-height: 6rem;
+    padding: 4rem;
+    border: 2px dashed #3999d0;
+    /* border-image: var(--blog-post-divider);
+    border-image: var(--default-divider); */
+    border-image-slice: 1;
+    transform: skewX(-7deg);
+}
+
+blockquote::after {
+    content: "”";
+    position: absolute;
+    display: block;
+    top: -2rem;
+    right: -2.5rem;
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: 6em;
+    /* color: #98E; */
+    color: #3999d0;
+}
+
+blockquote p:last-child {
+    font-size: 1em;
+}

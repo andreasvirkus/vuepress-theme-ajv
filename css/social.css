@@ -1,0 +1,12 @@
+.social__list {
+    text-align: right;
+}
+
+.social__icon {
+    display: inline-block;
+}
+
+.social__link svg {
+    width: 30px;
+    height: auto;
+}

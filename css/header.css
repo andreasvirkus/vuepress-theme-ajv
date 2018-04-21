@@ -1,0 +1,43 @@
+header {
+    text-align: right;
+}
+
+.logo {
+    position: relative;
+    width: 80px;
+    height: 70px;
+    fill: var(--content-color);
+    font-size: var(--logo-font-size);
+    font-family: Josefin Slab, serif;
+    padding: 0.3em;
+    box-sizing: initial;
+    border: 2px dashed transparent;
+    transition: border-color ease-out 0.15s;
+}
+.logo:hover {
+    border-color: inherit;
+}
+/* .logo:hover .logo__letter-j {
+    fill: var(--highlight-color);
+    fill: url(#logoGradientOrange);
+} */
+
+/* WIP label */
+.wip-page .logo::before {
+    content: 'WIP';
+    position: absolute;
+    top: 20%;
+    left: -20%;
+    background-color: var(--wip-label-bg);
+    color: var(--bg-light);
+    border-radius: 3px;
+    padding: .5em;
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+@media (min-width: 35em) {
+    header {
+        transform: translate(-1.5em, 2em);
+    }
+}
