@@ -1,6 +1,6 @@
 <template>
   <div class="theme-container"
-    :class="pageClasses"
+    :class="$page.frontmatter.pageClass"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
 
@@ -25,19 +25,6 @@ import { pathToComponentName, getTitle, getLang } from '@app/util'
 
 export default {
   components: { Home, Blog, Page, Navbar },
-
-  computed: {
-    pageClasses() {
-      const userPageClass = this.$page.frontmatter.pageClass
-      return [
-        {
-          'no-navbar': !this.showNavbar,
-        },
-        userPageClass
-      ]
-    }
-  },
-
   created () {
     if (this.$ssrContext) {
       this.$ssrContext.title = getTitle(this.$title, this.$page)
@@ -45,7 +32,6 @@ export default {
       this.$ssrContext.description = this.$page.description || this.$description
     }
   },
-
   mounted () {
     // update title / meta tags
     this.currentMetaTags = []
@@ -81,11 +67,9 @@ export default {
       nprogress.done()
     })
   },
-
   beforeDestroy () {
     updateMetaTags(null, this.currentMetaTags)
   },
-
   methods: {
     // side swipe
     onTouchStart (e) {
